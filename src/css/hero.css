@@ -31,7 +31,9 @@
   .pizza-frame img {
     width: 500px;
   }
-
+  .hero-wrapper {
+    height: 420px;
+  }
   .hero-title {
     font-size: 80px;
   }
@@ -48,6 +50,10 @@
 @media screen and (min-width: 1200px) {
   .pizza-frame img {
     width: 800px;
+  }
+
+  .hero-wrapper {
+    height: 660px;
   }
 
   .hero-title {
