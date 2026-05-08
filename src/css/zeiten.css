@@ -1,0 +1,45 @@
+.page-zeiten {
+  font-family: 'AlexBrush', sans-serif;
+  padding-bottom: 100px;
+}
+
+.zeiten-article {
+  margin-bottom: 25px;
+}
+
+.zeiten-title {
+  font-size: 35px;
+}
+
+.zeiten-text {
+  font-size: 20px;
+}
+.zeiten-ruhetag {
+  font-family: 'Open Sans', sans-serif;
+  width: 200px;
+  margin-left: auto;
+}
+
+.zeiten-ruhetag-text {
+  line-height: 1.1;
+}
+
+@media screen and (min-width: 768px) {
+  .zeiten-title {
+    font-size: 50px;
+  }
+
+  .zeiten-text {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .zeiten-title {
+    font-size: 86px;
+  }
+
+  .zeiten-text {
+    font-size: 49px;
+  }
+}

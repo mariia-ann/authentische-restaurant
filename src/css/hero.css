@@ -1,0 +1,56 @@
+.hero-section {
+}
+
+.hero-subtitle {
+  font-family: 'LeoHand', sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.hero-wrapper {
+  position: relative;
+}
+
+.hero-title {
+  position: relative;
+  font-family: 'AlexBrush', sans-serif;
+  letter-spacing: 0.04em;
+  font-size: 50px;
+  z-index: 2;
+}
+.pizza-frame {
+  width: 100%;
+}
+.pizza-frame img {
+  margin: 0 auto;
+  width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  .pizza-frame img {
+    width: 500px;
+  }
+
+  .hero-title {
+    font-size: 80px;
+  }
+
+  .pizza-frame {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pizza-frame img {
+    width: 800px;
+  }
+
+  .hero-title {
+    font-size: 125px;
+  }
+}
