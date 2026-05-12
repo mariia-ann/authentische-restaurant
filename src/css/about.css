@@ -1,0 +1,110 @@
+.section-about {
+  padding: 20px 0;
+  color: #083335;
+}
+
+.container-about {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Foto */
+.about-block-left {
+  display: grid;
+  /* Створюємо сітку: 12 колонок (для гнучкості) */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.about-photo {
+  grid-row: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Перше фото (те, що ззаду/збоку) */
+.about-photo:first-child {
+  grid-column: 1 / span 8; /* Займає з 1 по 8 колонку */
+  z-index: 1;
+}
+
+/* Друге фото (те, що попереду/по центру) */
+.about-photo:last-child {
+  grid-column: 5 / span 8; /* Займає з 4 по 12 колонку (нашаровується) */
+  z-index: 2;
+  /* Додаємо невеликий відступ зверху або знизу для динаміки */
+  margin-top: 50px;
+  /* Рамка або тінь, щоб відділити від нижнього фото */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* end foto */
+.about-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about-subtitle {
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .section-about {
+    padding: 40px 0;
+  }
+
+  .about-title {
+    width: 600px;
+    margin-bottom: 0 auto 30px;
+  }
+  .about-photo:last-child {
+    margin-top: 100px;
+  }
+  .about-text {
+    font-size: 20px;
+    width: 600px;
+    margin: 0 auto 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-about {
+    padding: 60px 0;
+  }
+
+  .container-about {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-block-left {
+    width: 50%;
+  }
+
+  .about-block-right {
+    width: 50%;
+    padding: 0 15px;
+  }
+
+  .about-photo:last-child {
+    margin-top: 120px;
+  }
+
+  .about-title {
+    text-align: start;
+  }
+
+  .about-text {
+    text-align: start;
+  }
+}

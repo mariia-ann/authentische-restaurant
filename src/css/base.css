@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
   font-family:
@@ -17,7 +21,8 @@
   font-weight: 400;
 
   color: #f6fbf9;
-  background-color: #083335;
+  /* background-color: #083335; */
+  background-color: #e2d1bd;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +31,15 @@
   -webkit-text-size-adjust: 100%;
 }
 
+@font-face {
+  font-family: 'CormorantGaramond';
+  src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 body {
+  font-family: 'CormorantGaramond';
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -54,6 +67,36 @@ main:has(.back-link) {
   src: url('../fonts/AlexBrush-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* ========== BASE ========== */

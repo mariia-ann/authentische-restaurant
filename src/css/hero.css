@@ -1,11 +1,26 @@
 .hero-section {
+  background-image: url('../img/hero.png');
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  min-width: 320px;
+  height: 700px;
+  color: #083335;
+  font-family: 'Montserrat';
 }
 
 .hero-subtitle {
-  font-family: 'LeoHand', sans-serif;
-  letter-spacing: 0.2em;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-family: 'CormorantGaramond';
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.hero-time {
+  font-weight: 700;
+}
+
+.hero-text {
+font-style: italic;
 }
 
 .hero-wrapper {
@@ -19,23 +34,43 @@
   font-size: 50px;
   z-index: 2;
 }
-.pizza-frame {
-  width: 100%;
+
+.icon-hero {
+  fill: #083335;
 }
-.pizza-frame img {
-  margin: 0 auto;
-  width: 300px;
+
+.hero-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 315px;
+}
+
+.hero-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  width: 240px;
 }
 
 @media screen and (min-width: 768px) {
+  .hero-section {
+    width: 768px;
+  }
   .pizza-frame img {
     width: 500px;
   }
   .hero-wrapper {
-    height: 420px;
+    /* height: 420px; */
   }
   .hero-title {
     font-size: 80px;
+  }
+
+  .hero-list {
+    padding-top: 340px;
   }
 
   .pizza-frame {
@@ -48,12 +83,15 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .hero-section {
+    min-width: 1200px;
+  }
   .pizza-frame img {
     width: 800px;
   }
 
   .hero-wrapper {
-    height: 660px;
+    /* height: 660px; */
   }
 
   .hero-title {

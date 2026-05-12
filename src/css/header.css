@@ -1,6 +1,11 @@
 .header {
-  padding: 20px 0;
-  color: #d3b07a;
+  padding: 0 0 10px;
+  /* color: #e2d1bd; */
+  background-color: #8f724f;
+}
+
+.wrapper-menu {
+  display: flex;
 }
 .nav {
   display: flex;
@@ -12,10 +17,13 @@
   justify-content: center;
 }
 .nav-list {
-  display: flex;
+  font-family: 'CormorantGaramond';
+  display: none;
+  /* display: flex; */
   align-items: center;
   justify-content: flex-end;
   gap: 40px;
+  padding: 20px 0;
 }
 .nav-link {
   position: relative;
@@ -26,7 +34,7 @@
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: #747bff;
+  color: #fff;
 }
 .nav-link::after {
   content: '';
@@ -41,5 +49,47 @@
   animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
 }
 .nav-link.active::after {
-  background: #747bff;
+  background: #fff;
+}
+
+.header-burger-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms linear;
+}
+
+.icon-header {
+  fill: #e2d1bd;
+}
+
+.header-burger-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn-reserv {
+  color: #083335;
+  border: 1px solid #083335;
+  border-radius: 35px;
+  padding: 5px 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-open-btn {
+    display: none; /* Ховаємо бургер */
+  }
+  .nav-list {
+    display: flex;
+    font-size: 23px;
+    font-weight: 700;
+  }
+  .header-burger-backdrop {
+    display: none; /* Повністю прибираємо мобільне меню */
+  }
 }
