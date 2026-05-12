@@ -9,25 +9,74 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
     />
-    <script type="module" crossorigin src="/authentische-restaurant/assets/main-C5jgWwgd.js"></script>
-    <link rel="stylesheet" crossorigin href="/authentische-restaurant/assets/main-CPrvboIe.css">
+    <script type="module" crossorigin src="/authentische-restaurant/assets/main-CAPprH0D.js"></script>
+    <link rel="stylesheet" crossorigin href="/authentische-restaurant/assets/main-BgeB4a0n.css">
   </head>
   <body>
     <header class="header">
   <div class="container">
     <nav class="nav">
       <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        LOGO
+        <img src="/authentische-restaurant/assets/logo3-C99AonxL.png" alt="Logo" width="200" height="100" />
         <!-- <svg class="nav-logo-icon" width="100" height="30">
           <use href="{=$icon-path}"></use>
         </svg> -->
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./zeiten.html">Öffnungszeiten</a>
+      <div class="wrapper-menu">
+        <button class="menu-open-btn" type="button" aria-label="Open menu">
+          <svg  class="icon-header" width="32" height="32">
+            <use href="../img/icons.svg#icon-menu-svgrepo-com"></use>
+          </svg>
+        </button>
+
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link {=$highlight-curr}" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {=$highlight-curr}" href="#about">Das Restaurant</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {=$highlight-curr}" href="#spaisekarte"
+              >Speisekarte</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {=$highlight-curr}" href="#events">Events</a>
+          </li>
+          <li class="nav-item btn-reserv">
+            <a class="nav-link {=$highlight-curr}" href="#">Reservierung</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="header-burger-backdrop">
+    <div class="header-burger-menu">
+      <button class="header-close-btn" type="button" aria-label="Close button">
+        <svg class="header-close-icon icon-header" width="28" height="28">
+          <use href="../img/icons.svg#icon-close-svgrepo-com"></use>
+        </svg>
+      </button>
+      <ul class="header-burger-menu-list">
+        <li class="header-burger-menu-list-item">
+          <a href="#about-me" class="header-burger-list-item-link">About me</a>
+        </li>
+        <li class="header-menu-list-item">
+          <a href="#benefits" class="header-burger-list-item-link">Benefits</a>
+        </li>
+        <li class="header-menu-list-item">
+          <a href="#projects" class="header-burger-list-item-link">Projects</a>
+        </li>
+        <li class="header-menu-list-item">
+          <a href="#faq" class="header-burger-list-item-link">FAQ</a>
         </li>
       </ul>
-    </nav>
+      <div class="header-burger-order-btn-box">
+        <a class="header-burger-order-btn" href="#footer">Order the project</a>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -35,19 +84,131 @@
     <main>
       <section class="hero-section">
   <div class="container">
-    <h2 class="hero-subtitle">Ristorante e pinseria</h2>
     <div class="hero-wrapper">
-      <h1 class="hero-title">I Baroni</h1>
-      <div class="pizza-frame">
-        <img src="/authentische-restaurant/assets/pizza-hero-D4UZ_DBG.png" alt="Pizza" />
+      <h1 class="hero-title visually-hidden">
+        Ristorante e pinseria - I Baroni
+      </h1>
+    </div>
+
+    <ul class="hero-list">
+      <li class="hero-item">
+        <svg class="icon-hero" width="32" height="32">
+          <use href="../img/icons.svg#icon-menu-svgrepo-com"></use>
+        </svg>
+        <h3 class="hero-subtitle">Frühstück</h3>
+        <p class="hero-time">8:00 - 10:30 Uhr</p>
+        <p class="hero-text">Beginnen Sie den Tag entspannt</p>
+      </li>
+      <li class="hero-item">
+        <svg class="icon-hero" width="32" height="32">
+          <use href="../img/icons.svg#icon-menu-svgrepo-com"></use>
+        </svg>
+        <h3 class="hero-subtitle">Warme Küche</h3>
+        <p class="hero-time">18:00 - 22:00 Uhr</p>
+        <p class="hero-text">Am Abend servieren wir Ihnen frisch</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section id="about" class="section-about">
+  <div class="container container-about">
+    <div class="about-block-left">
+      <img src="../img/about1.jpg" alt="About" class="about-photo" />
+      <img src="../img/about2.jpg" alt="About" class="about-photo" />
+    </div>
+    <div class="about-block-right">
+      <h2 class="about-title">
+        Italienische Küche, stilvolles Ambiente und aufmerksamer Service
+      </h2>
+      <h2 class="about-subtitle">Italienischer Genuss im Herzen des Schwarzwalds</h2>
+      <p class="about-text">
+        Erleben Sie authentische italienische Küche in stilvoller Atmosphäre und
+        genießen Sie besondere Genussmomente direkt in unserem Hotelrestaurant.
+        Unsere Küchenchefs bringen internationale Erfahrung aus verschiedenen
+        Ländern Europas und der Welt mit und vereinen traditionelle italienische
+        Rezepte mit moderner Raffinesse.
+      </p>
+      <p class="about-text">
+        Frische Zutaten, hochwertige Qualität und mit Leidenschaft zubereitete
+        Gerichte machen jeden Besuch zu einem kleinen Kurzurlaub für die Sinne.
+        Ob romantisches Dinner, entspannter Abend am Kamin oder ein Glas Wein in
+        gemütlicher Atmosphäre – bei uns erleben Sie ein Stück Italien mitten im
+        Schwarzwald.
+      </p>
+    </div>
+  </div>
+</section>
+
+      <section id="spaisekarte" class="section-spaisekarte">
+  <div class="container">
+    <div class="category-wrapper">
+      <!-- Кнопки керування -->
+      <div class="tab-menu">
+        <button class="tab-link active" data-target="pic1">Vorspeisen</button>
+        <button class="tab-link" data-target="pic2">Salate</button>
+        <button class="tab-link" data-target="pic3">Paste</button>
+        <button class="tab-link" data-target="pic4">Pinsa</button>
+        <button class="tab-link" data-target="pic5">Fleisch</button>
+        <button class="tab-link" data-target="pic6">Kinderkarte</button>
+      </div>
+
+      <!-- Блоки з фото -->
+      <div id="pic1" class="tab-panel" style="display: block">
+        <img src="../img/menu/1-big.jpg" alt="Vorspeisen" class="main-photo" />
+      </div>
+
+      <div id="pic2" class="tab-panel">
+        <img src="../img/menu/2-big.jpg" alt="Salate" class="main-photo" />
+      </div>
+
+      <div id="pic3" class="tab-panel">
+        <img src="../img/menu/3-big.jpg" alt="Nudelgerischte" class="main-photo" />
+        <img src="../img/menu/3-big-1.jpg" alt="Nudelgerischte" class="main-photo" />
+      </div>
+      <div id="pic4" class="tab-panel">
+        <img src="../img/menu/4-big.jpg" alt="Pinsa" class="main-photo" />
+        <img src="../img/menu/4-big-1.jpg" alt="Pinsa" class="main-photo" />
+      </div>
+      <div id="pic5" class="tab-panel">
+        <img src="../img/menu/5-big.jpg" alt="Fleisch" class="main-photo" />
+      </div>
+      <div id="pic6" class="tab-panel">
+        <img src="../img/menu/6-big.jpg" alt="Kinderkarte" class="main-photo" />
       </div>
     </div>
   </div>
 </section>
 
-      <section>
+      <section id="events" class="section-events">
   <div class="container">
-
+    <h3 class="events-subtitle">
+      <img src="/authentische-restaurant/assets/transparent-Cr3mfuJK.png" alt="Leaf" class="decor-leaf" width="30"/>
+      Unsere
+      <img src="/authentische-restaurant/assets/transparent2-BCGWi5e5.png" alt="Leaf" class="decor-leaf" width="30" />
+    </h3>
+    <h2 class="events-title">Events</h2>
+    <p class="events-text">
+      Besondere Momente in gemütlicher und natürlicher Atmosphäre
+    </p>
+    <div class="wrapper-events">
+      <ul class="events-list">
+        <li class="events-item events-item-left">
+          <h3 class="ivents-item-title">Events</h3>
+          <p class="ivents-item-text">
+            Geburtstage, Jubiläen, Hochzeiten und andere besondere Anlässe
+          </p>
+          <button type="button">Anfragen</button>
+        </li>
+        <li class="events-item events-item-right">
+          <h3 class="ivents-item-title">Firmenfeiern</h3>
+          <p class="ivents-item-text">
+            Der perfekte Ort für Ihr Unternehmens-Event
+          </p>
+          <button type="button">Anfragen</button>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
