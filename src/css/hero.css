@@ -1,7 +1,7 @@
 .hero-section {
   background-image: url('../img/hero.png');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   margin: 0 auto;
   min-width: 320px;
   height: 700px;
@@ -20,7 +20,7 @@
 }
 
 .hero-text {
-font-style: italic;
+  font-style: italic;
 }
 
 .hero-wrapper {
@@ -37,6 +37,8 @@ font-style: italic;
 
 .icon-hero {
   fill: #083335;
+  /* fill: transparent; */
+  /* stroke: #083335; */
 }
 
 .hero-list {
@@ -44,7 +46,7 @@ font-style: italic;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding-top: 315px;
+  padding-top: 250px;
 }
 
 .hero-item {
@@ -89,7 +91,10 @@ font-style: italic;
   .pizza-frame img {
     width: 800px;
   }
-
+  .hero-list {
+    width: 700px;
+    margin: 0 auto;
+  }
   .hero-wrapper {
     /* height: 660px; */
   }

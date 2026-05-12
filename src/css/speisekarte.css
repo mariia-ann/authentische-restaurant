@@ -32,6 +32,8 @@
 
 /* Ховаємо блоки за замовчуванням */
 .tab-panel {
+  max-width: 700px;
+  margin: auto;
   display: none;
   animation: fadeIn 0.5s;
 }

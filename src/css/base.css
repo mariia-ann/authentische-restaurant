@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 75px;
 }
 
 :root {
@@ -153,6 +154,9 @@ p {
 /* ========== DESKTOP ========== */
 
 @media screen and (min-width: 1200px) {
+  html {
+    scroll-padding-top: 96px;
+  }
   h1 {
     font-size: 56px;
   }
