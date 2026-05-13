@@ -9,8 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
     />
-    <script type="module" crossorigin src="/authentische-restaurant/assets/main-BYH6Zw0r.js"></script>
-    <link rel="stylesheet" crossorigin href="/authentische-restaurant/assets/main-46cgouqN.css">
+    <script type="module" crossorigin src="/authentische-restaurant/assets/vendor-BTlvWiRO.js"></script>
+    <script type="module" crossorigin src="/authentische-restaurant/assets/main-DdddEJBQ.js"></script>
+    <link rel="stylesheet" crossorigin href="/authentische-restaurant/assets/main-Cf4Q0WsY.css">
+    <link rel="stylesheet" crossorigin href="/authentische-restaurant/assets/vendor-f2fnZX2x.css">
   </head>
   <body>
     <header class="header">
@@ -39,7 +41,7 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link {=$highlight-curr}" href="#spaisekarte"
+            <a class="nav-link {=$highlight-curr}" href="#speisekarte"
               >Speisekarte</a
             >
           </li>
@@ -49,10 +51,8 @@
           <li class="nav-item">
             <a class="nav-link {=$highlight-curr}" href="#gallery">Galerie</a>
           </li>
-          <li class="nav-item btn-reserv">
-            <a class="nav-link {=$highlight-curr}" href="#">Reservierung</a>
-          </li>
         </ul>
+        <button class="btn-reserv" type="button">Reservierung</button>
       </div>
     </nav>
   </div>
@@ -84,15 +84,10 @@
         <li class="header-menu-list-item">
           <a href="#gallery" class="header-burger-list-item-link">Galerie</a>
         </li>
-        <li class="header-menu-list-item">
-          <a href="#events" class="header-burger-list-item-link btn-reserv"
-            >Reservierung</a
-          >
-        </li>
       </ul>
+      <button class="header-burger-button" type="button">Reservierung</button>
     </div>
   </div>
-
 </header>
 
 
@@ -108,15 +103,15 @@
     <ul class="hero-list">
       <li class="hero-item">
         <svg class="icon-hero" width="32" height="32">
-          <use href="../img/icons.svg#icon-coffee"></use>
+          <use href="/authentische-restaurant/assets/icons-DNgi1Xte.svg#icon-coffee"></use>
         </svg>
         <h3 class="hero-subtitle">Frühstück</h3>
         <p class="hero-time">8:00 - 10:30 Uhr</p>
-        <p class="hero-text">Beginnen Sie den Tag entspannt</p>
+        <p class="hero-text">Genießen Sie unser reichhaltiges Frühstücksbuffet</p>
       </li>
       <li class="hero-item">
         <svg class="icon-hero" width="32" height="32">
-          <use href="../img/icons.svg#icon-food"></use>
+          <use href="/authentische-restaurant/assets/icons-DNgi1Xte.svg#icon-food"></use>
         </svg>
         <h3 class="hero-subtitle">Warme Küche</h3>
         <p class="hero-time">18:00 - 22:00 Uhr</p>
@@ -158,7 +153,7 @@
   </div>
 </section>
 
-      <section id="spaisekarte" class="section-spaisekarte">
+      <section id="speisekarte" class="section-spaisekarte">
   <div class="container">
     <div class="category-wrapper">
       <!-- Кнопки керування -->
@@ -169,6 +164,8 @@
         <button class="tab-link" data-target="pic4">Pinsa</button>
         <button class="tab-link" data-target="pic5">Fleisch</button>
         <button class="tab-link" data-target="pic6">Kinderkarte</button>
+        <button class="tab-link" data-target="pic7">Dessert</button>
+        <button class="tab-link" data-target="pic8">Gätrenke</button>
       </div>
 
       <!-- Блоки з фото -->
@@ -194,6 +191,15 @@
       <div id="pic6" class="tab-panel">
         <img src="/authentische-restaurant/assets/6-big-Bo_EvGCr.jpg" alt="Kinderkarte" class="main-photo" />
       </div>
+      <div id="pic7" class="tab-panel">
+        <img src="/authentische-restaurant/assets/7-big-P0_HGbON.jpg" alt="Dessert" class="main-photo" />
+      </div>
+      <div id="pic8" class="tab-panel">
+        <img src="/authentische-restaurant/assets/8-big-cu5cLKiE.jpg" alt="Gätrenke" class="main-photo" />
+        <img src="/authentische-restaurant/assets/8-big-1-Dzv1CxKf.jpg" alt="Gätrenke" class="main-photo" />
+        <img src="/authentische-restaurant/assets/8-big-2-n58JAeB8.jpg" alt="Gätrenke" class="main-photo" />
+      </div>
+
     </div>
   </div>
 </section>
@@ -230,24 +236,171 @@
   </div>
 </section>
 
-      <section id="gallery" >
-  <div class="container"></div>
+      <section id="gallery" class="section-gallery">
+    <div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery1-DU1idZzr.png" alt="1"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery2-C3UZ3Lkx.png" alt="2"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery3-ulX2TCSQ.png" alt="3"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery4-CfsOWuLi.png" alt="4"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery5--xveTYMK.png" alt="5"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery6-DsiOosqo.png" alt="6"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery7-Bv8sj_M_.png" alt="7"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery8-V1QSOxCd.png" alt="8"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery9-DoQZC6jq.png" alt="9"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery10-BOVUq1j5.png" alt="10"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery11-Bp1swZMb.png" alt="11"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery12-D96I3r-R.png" alt="12"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery13-ByqY_kJ-.png" alt="13"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery14-DFr2wUZ7.png" alt="14"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery15-zvKpcksj.png" alt="15"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery16-CRWJB1Qe.png" alt="16"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery17-BcTf-amt.png" alt="17"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery18-COBEhBlI.png" alt="18"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery19-DMXIeh70.png" alt="19"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery20-CvWSs5PV.png" alt="20"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery21-B3OE5l-r.png" alt="21"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery22-BSLT-NCt.png" alt="22"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery23-CjvaSCIu.png" alt="23"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery24-DEdYOl2f.png" alt="24"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery25-CVlDPz9f.png" alt="25"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery26-CJC5ryzz.png" alt="26"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery27-CCrzkCMk.png" alt="27"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery28-CbhGwUQP.png" alt="28"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery29-BHtiKx9t.png" alt="29"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery30-CtU7pJeJ.png" alt="30"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery31-Dc6hGt6-.png" alt="31"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery32-k7TkjuHn.png" alt="32"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery33-CCOhIKrx.png" alt="33"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery34-CsIVEI-b.png" alt="34"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery35-Bm9FA7eW.png" alt="35"></div>
+    <div class="swiper-slide"><img src="/authentische-restaurant/assets/gallery36-Cgd8EwU1.png" alt="36"></div>
+
+
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
 </section>
 
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      <a
-        class="footer-link"
-        href="https://schwarzwaldhotel.de/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        © Copyright Holzschuh’s Schwarzwaldhotel
-      </a>
-    </p>
+  <div class="container footer-list">
+    <div class="footer-grid">
+      <!-- 1 left -->
+      <div class="footer-col brand-col">
+        <a href="./index.html" class="footer-logo">
+          <img
+            src="/authentische-restaurant/assets/logo2-DW-f__-s.png"
+            alt="Restaurant"
+            width="200"
+            height="100"
+          />
+        </a>
+        <p class="footer-text">
+          Italiesnische Küche mit Herz in einzigartigem Ambiente. Genießen Sie
+          besondere Momente bei uns.
+        </p>
+      </div>
+
+      <!-- 2 left -->
+      <div class="footer-col">
+        <h3 class="footer-title">Kontakt</h3>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <svg height="24" width="24" class="social-icon">
+                <use href="/authentische-restaurant/assets/icons-DNgi1Xte.svg#icon-phone"></use>
+              </svg>
+            <a class="contacts-link" href="tel:+4915252301326"
+              >+49 1525 2301326</a
+            >
+          </li>
+          <li class="contact-item">
+            <svg height="24" width="24" class="social-icon">
+                <use href="/authentische-restaurant/assets/icons-DNgi1Xte.svg#icon-email"></use>
+              </svg>
+            <a
+              class="contacts-link"
+              href="mailto:info.autenticoristorante@gmail.com"
+              >info.autenticoristorante@gmail.com</a
+            >
+          </li>
+          <li class="contact-item address-item">
+            <svg height="24" width="24" class="social-icon">
+                <use href="/authentische-restaurant/assets/icons-DNgi1Xte.svg#icon-location"></use>
+              </svg>
+            Murgtalstraße. 655, 72270, Baiersbronn-Schönmünzach
+          </li>
+        </ul>
+      </div>
+
+      <!-- 3 right -->
+
+      <!-- 3 колонка: Графік роботи -->
+      <div class="footer-col">
+        <h3 class="footer-title">Öffnungszeiten</h3>
+        <ul class="hours-list">
+          <li>Frühstück<br /><span>8:00 - 10:30 Uhr</span></li>
+          <li>Warme Küche<br /><span>18:00 - 22:00 Uhr</span></li>
+          <li>Mo, Mi, So<br /><span>8:00 - 22:00 Uhr</span></li>
+
+          <li>Küche bis 21:30 Uhr</li>
+        </ul>
+      </div>
+
+      <!-- 4 right -->
+      <div class="footer-col action-col">
+        <h3 class="footer-title">Tisch Reservieren</h3>
+        <p class="action-text">
+          Reservieren Sie jetzt Ihren Tisch und freuen Sie sich auf einen
+          unvergesslichen Abend.
+        </p>
+        <a href="#reservierung" class="reserve-btn">Jetzt Reservieren</a>
+
+        <div class="social-block">
+          <h4 class="social-title">Folgen Sie uns</h4>
+          <div class="social-icon">
+            <a
+              href="https://www.instagram.com/ristorante.autentico_"
+              class="social-link"
+              aria-label="Instagram"
+            >
+              <svg height="24" width="24" class="social-icon">
+                <use href="/authentische-restaurant/assets/icons-DNgi1Xte.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg height="24" width="24" class="social-icon">
+                <use href="/authentische-restaurant/assets/icons-DNgi1Xte.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-links">
+        <a href="./impressum.html">Impressum</a>
+        <span class="separator">|</span>
+        <a href="./datenschutz.html">Datenschutz</a>
+      </div>
+      <p class="copyright">
+        © 2026 Das Authentische Restaurant. Alle Rechte vorbehalten.
+      </p>
+      <!-- <a href="#header" class="to-top-btn" aria-label="Nach oben">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a> -->
+    </div>
   </div>
 </footer>
 
