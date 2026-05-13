@@ -11,6 +11,7 @@
 
 .wrapper-menu {
   display: flex;
+  gap: 20px;
 }
 .nav {
   display: flex;
@@ -56,33 +57,18 @@
 .nav-link.active::after {
   background: #fff;
 }
-
-.header-burger-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 250ms linear;
-}
-
-.icon-header {
-  fill: #e2d1bd;
-}
-
-.header-burger-backdrop.is-open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .btn-reserv {
+  display: none;
+  margin: auto;
   color: #083335;
   border: 1px solid #083335;
   border-radius: 35px;
-  padding: 5px 30px;
+  padding: 10px 24px;
+  font-size: 23px;
+}
+
+.btn-reserv:hover {
+  color: #000;
 }
 
 @media screen and (min-width: 1200px) {
@@ -97,4 +83,101 @@
   .header-burger-backdrop {
     display: none; /* Повністю прибираємо мобільне меню */
   }
+
+  .btn-reserv {
+    display: unset;
+  }
+}
+
+/* Mobile */
+
+.header-burger-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 300ms ease,
+    visibility 300ms ease;
+}
+
+.icon-header {
+  fill: #e2d1bd;
+}
+
+.header-burger-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.header-burger-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 320px;
+  height: 100%;
+  background-color: #8f724f;
+  padding: 48px 24px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 300ms ease;
+}
+
+.header-burger-backdrop.is-open .header-burger-menu {
+  transform: translateX(0);
+}
+
+.header-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
+}
+
+.header-burger-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header-burger-list-item-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+.header-burger-list-item-link:hover,
+.header-burger-list-item-link:focus {
+  color: #083335;
+}
+
+.header-burger-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #083335;
+  border: 1px solid #083335;
+  border-radius: 35px;
+  padding: 10px 24px;
+  margin: 0 auto;
 }

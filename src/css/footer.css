@@ -1,8 +1,219 @@
 .footer {
-  padding: 20px 0;
-  background-color: #083335;
-  color: #f1f1f1;
+  padding: 60px 0;
+  background-color: #121212;
+  color: #ffffff;
 }
-.footer-desc {
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
   text-align: center;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+}
+
+.brand-col {
+  gap: 30px;
+}
+
+/* Заголовки колонок */
+.footer-title,
+.social-title {
+  color: #d3b07a; /* Твій фірмовий золотий колір */
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
+}
+
+/* Списки */
+.contact-list,
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.contacts-link {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+.contacts-link:hover {
+  color: #d3b07a;
+}
+
+.hours-list span {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Текстові блоки */
+.footer-text,
+.action-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #999999;
+  max-width: 280px;
+  margin-bottom: 20px;
+    text-align: start;
+}
+
+/* Кнопка бронювання */
+.reserve-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d3b07a;
+  color: #d3b07a;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 12px 24px;
+  transition: all 250ms ease;
+}
+
+.reserve-btn:hover {
+  background-color: #d3b07a;
+  color: #121212;
+}
+
+/* Блок соцмереж всередині 4-ї колонки */
+.social-block {
+  margin-top: 30px;
+}
+
+.social-title {
+  margin-bottom: 12px;
+}
+
+.social-icon {
+  fill: #cccccc;
+  transition:
+    fill 250ms ease,
+    transform 250ms ease;
+}
+
+.social-link:hover .social-icon {
+  fill: #d3b07a;
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   2. НИЖНЯ ЧАСТИНА (КОПІРАЙТ ТА ПОСИЛАННЯ)
+   ========================================================================== */
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(211, 176, 122, 0.15); /* Тонка золотава лінія */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 13px;
+  color: #777777;
+  position: relative;
+}
+
+.footer-bottom-links a {
+  color: #777777;
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #d3b07a;
+}
+
+.separator {
+  margin: 0 10px;
+  color: rgba(211, 176, 122, 0.15);
+}
+
+/* Кнопка вгору */
+.to-top-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(211, 176, 122, 0.3);
+  border-radius: 50%;
+  color: #d3b07a;
+  transition: all 250ms ease;
+}
+
+.to-top-btn:hover {
+  border-color: #d3b07a;
+  background-color: rgba(211, 176, 122, 0.05);
+}
+
+/* ==========================================================================
+   3. ПЛАНШЕТНА ВЕРСІЯ (від 768px) - 2х2 блоки
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+  .footer-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .footer-col {
+    flex-basis: calc((100% - 40px) / 2);
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .footer-text,
+  .action-text {
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   4. ДЕСКТОПНА ВЕРСІЯ (від 1200px) - 4 колонки в один ряд
+   ========================================================================== */
+@media screen and (min-width: 1200px) {
+  .footer-grid {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .footer-col {
+    flex-basis: auto;
+  }
+
+  .brand-col {
+    max-width: 250px;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .to-top-btn {
+    position: absolute;
+    right: 0;
+    top: 18px;
+  }
 }
