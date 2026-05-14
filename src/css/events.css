@@ -42,7 +42,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end; /* Текст внизу */
+  justify-content: flex-end;
   padding: 40px;
   border-radius: 20px;
   overflow: hidden;
@@ -126,6 +126,9 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .section-events {
+    padding: 60px 0 120px;
+  }
   .events-subtitle {
     font-size: 20px;
   }

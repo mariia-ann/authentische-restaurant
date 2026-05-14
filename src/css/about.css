@@ -12,7 +12,6 @@
 /* Foto */
 .about-block-left {
   display: grid;
-  /* Створюємо сітку: 12 колонок (для гнучкості) */
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   align-items: center;
@@ -27,19 +26,15 @@
   object-fit: cover;
 }
 
-/* Перше фото (те, що ззаду/збоку) */
 .about-photo:first-child {
-  grid-column: 1 / span 9; /* Займає з 1 по 8 колонку */
+  grid-column: 1 / span 9;
   z-index: 1;
 }
 
-/* Друге фото (те, що попереду/по центру) */
 .about-photo:last-child {
-  grid-column: 4 / span 9; /* Займає з 4 по 12 колонку (нашаровується) */
+  grid-column: 4 / span 9;
   z-index: 2;
-  /* Додаємо невеликий відступ зверху або знизу для динаміки */
   margin-top: 50px;
-  /* Рамка або тінь, щоб відділити від нижнього фото */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -51,8 +46,8 @@
 }
 
 .about-subtitle {
-  text-align: start;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .about-text {
@@ -102,6 +97,10 @@
   .about-title {
     text-align: start;
   }
+
+  .about-subtitle {
+  text-align: start;
+}
 
   .about-text {
     text-align: start;
