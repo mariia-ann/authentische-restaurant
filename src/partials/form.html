@@ -1,0 +1,65 @@
+<div class="form-modal-backdrop" id="formModal">
+  <div class="form-modal-window">
+
+    <button class="form-modal-close-btn" id="closeFormBtn" type="button" aria-label="Close">
+      <svg width="24" height="24">
+        <use href="./img/icons.svg#icon-close-svgrepo-com"></use>
+      </svg>
+    </button>
+
+    <form id="ajaxForm" class="universal-form">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+      <input type="hidden" name="subject" value="Neue Reservierung / Anfrage" />
+
+      <h3 class="modal-form-title">Reservierung</h3>
+
+      <label class="form-field">
+        <span class="field-label">Ihr Name *</span>
+        <input type="text" name="name" required placeholder="z.B. Anna Müller" class="form-input" />
+      </label>
+
+      <label class="form-field">
+        <span class="field-label">Telefonnummer *</span>
+        <input type="tel" name="phone" required placeholder="+49 123 456789" class="form-input" />
+      </label>
+
+      <label class="form-field">
+        <span class="field-label">E-Mail-Adresse *</span>
+        <input type="email" name="email" required placeholder="anna.mueller@example.de" class="form-input" />
+      </label>
+
+      <label class="form-field">
+        <span class="field-label">Thema *</span>
+        <select name="thema" required class="form-select">
+          <option value="" disabled selected>Bitte wählen Sie...</option>
+          <option value="Tischreservierung">Tisch reservieren</option>
+          <option value="Frage">Allgemeine Frage</option>
+        </select>
+      </label>
+
+      <label class="form-field">
+        <span class="field-label">Ihre Nachricht *</span>
+        <textarea name="message" required placeholder="Wie können wir Ihnen helfen?" class="form-textarea"></textarea>
+      </label>
+
+      <label class="form-checkbox-field">
+        <input type="checkbox" name="privacy_policy" required class="form-checkbox" />
+        <span class="checkbox-text">
+          Ich habe die <a href="./datenschutz.html" target="_blank" class="form-link">Datenschutzerklärung</a> gelesen und akzeptiere sie. *
+        </span>
+      </label>
+
+      <button type="submit" class="form-submit-btn" id="submitBtn">Nachricht senden</button>
+    </form>
+
+    <div id="successMessage" class="form-success-block" style="display: none;">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#d3b07a" stroke-width="2">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      <h3>Vielen Dank!</h3>
+      <p>Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns в розрізі Kürze bei Ihnen melden.</p>
+    </div>
+
+  </div>
+</div>

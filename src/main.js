@@ -6,12 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', e => {
       const targetId = e.currentTarget.getAttribute('data-target');
 
-      // Ховаємо всі панелі
       panels.forEach(p => (p.style.display = 'none'));
-      // Прибираємо активний клас
       links.forEach(l => l.classList.remove('active'));
-
-      // Показуємо потрібну
       document.getElementById(targetId).style.display = 'block';
       e.currentTarget.classList.add('active');
     });
@@ -23,7 +19,6 @@ const openMenuBtn = document.querySelector('.menu-open-btn');
 const closeMenuBtn = document.querySelector('.header-close-btn');
 const menuBackdrop = document.querySelector('.header-burger-backdrop');
 
-// Функція для перемикання меню
 const toggleMenu = () => {
   menuBackdrop.classList.toggle('is-open');
   document.body.classList.toggle('no-scroll');
@@ -68,4 +63,73 @@ const swiper = new Swiper('.mySwiper', {
       spaceBetween: 10
     }
   }
+});
+
+// Form
+
+const modal = document.getElementById('formModal');
+const openBtns = document.querySelectorAll('.js-open-form');
+const closeBtn = document.getElementById('closeFormBtn');
+const form = document.getElementById('ajaxForm');
+const successBlock = document.getElementById('successMessage');
+const submitBtn = document.getElementById('submitBtn');
+
+openBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+  });
+});
+
+const closeModal = () => {
+  modal.classList.remove('is-open');
+  document.body.classList.remove('no-scroll');
+  setTimeout(() => {
+    form.style.display = 'flex';
+    successBlock.style.display = 'none';
+    form.reset();
+  }, 300);
+};
+
+closeBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) closeModal();
+});
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  submitBtn.textContent = "Wird gesendet...";
+  submitBtn.disabled = true;
+
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  fetch('https://web3forms.com', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: json
+  })
+  .then(async (response) => {
+    let res = await response.json();
+    if (response.status == 200) {
+      form.style.display = 'none';
+      successBlock.style.display = 'flex';
+    } else {
+      alert(res.message);
+    }
+  })
+  .catch(error => {
+    console.log(error);
+    alert("Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.");
+  })
+  .then(function() {
+    submitBtn.textContent = "Nachricht senden";
+    submitBtn.disabled = false;
+  });
 });

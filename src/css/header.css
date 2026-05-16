@@ -65,10 +65,12 @@
   border-radius: 35px;
   padding: 10px 24px;
   font-size: 23px;
+  transition: all 0.3s ease;
 }
 
 .btn-reserv:hover {
-  color: #000;
+  color: #e2d1bd;
+  background-color: #083335;
 }
 
 @media screen and (min-width: 1200px) {
