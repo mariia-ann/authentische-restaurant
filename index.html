@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/authentische-restaurant/favicon.svg" />
@@ -10,8 +10,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
     />
     <script type="module" crossorigin src="/authentische-restaurant/assets/vendor-BTlvWiRO.js"></script>
-    <script type="module" crossorigin src="/authentische-restaurant/assets/main-BGocVt1R.js"></script>
-    <link rel="stylesheet" crossorigin href="/authentische-restaurant/assets/main-Bz_PinWC.css">
+    <script type="module" crossorigin src="/authentische-restaurant/assets/main-uO9_miuu.js"></script>
+    <link rel="stylesheet" crossorigin href="/authentische-restaurant/assets/main-DAllZbtu.css">
     <link rel="stylesheet" crossorigin href="/authentische-restaurant/assets/vendor-f2fnZX2x.css">
   </head>
   <body>
@@ -27,7 +27,7 @@
       <div class="wrapper-menu">
         <button class="menu-open-btn" type="button" aria-label="Open menu">
           <svg class="icon-header" width="32" height="32">
-            <use href="../img/icons.svg#icon-menu-svgrepo-com"></use>
+            <use href="/authentische-restaurant/assets/icons-CrWPZY8R.svg#icon-menu-svgrepo-com"></use>
           </svg>
         </button>
 
@@ -52,7 +52,7 @@
             <a class="nav-link {=$highlight-curr}" href="#gallery">Galerie</a>
           </li>
         </ul>
-        <button class="btn-reserv" type="button">Reservierung</button>
+        <button class="btn-reserv js-open-form" type="button">Reservierung</button>
       </div>
     </nav>
   </div>
@@ -61,7 +61,7 @@
     <div class="header-burger-menu">
       <button class="header-close-btn" type="button" aria-label="Close button">
         <svg class="header-close-icon icon-header" width="28" height="28">
-          <use href="../img/icons.svg#icon-close-svgrepo-com"></use>
+          <use href="/authentische-restaurant/assets/icons-CrWPZY8R.svg#icon-close-svgrepo-com"></use>
         </svg>
       </button>
       <ul class="header-burger-menu-list">
@@ -85,7 +85,7 @@
           <a href="#gallery" class="header-burger-list-item-link">Galerie</a>
         </li>
       </ul>
-      <button class="header-burger-button" type="button">Reservierung</button>
+      <button class="header-burger-button js-open-form" type="button">Reservierung</button>
     </div>
   </div>
 </header>
@@ -220,14 +220,14 @@
           <p class="ivents-item-text">
             Geburtstage, Jubiläen, Hochzeiten und andere besondere Anlässe
           </p>
-          <button type="button">Anfragen</button>
+          <button type="button" class="js-open-form">Anfragen</button>
         </li>
         <li class="events-item events-item-right">
           <h3 class="ivents-item-title">Firmenfeiern</h3>
           <p class="ivents-item-text">
             Der perfekte Ort für Ihr Unternehmens-Event
           </p>
-          <button type="button">Anfragen</button>
+          <button type="button" class="js-open-form">Anfragen</button>
         </li>
       </ul>
     </div>
@@ -385,7 +385,7 @@
           Reservieren Sie jetzt Ihren Tisch und freuen Sie sich auf einen
           unvergesslichen Abend.
         </p>
-        <a href="#reservierung" class="reserve-btn">Jetzt Reservieren</a>
+        <a href="#" class="reserve-btn js-open-form">Jetzt Reservieren</a>
       </div>
     </div>
 
@@ -414,6 +414,71 @@
   </div>
 </footer>
 
+    <div class="form-modal-backdrop" id="formModal">
+  <div class="form-modal-window">
+
+    <button class="form-modal-close-btn" id="closeFormBtn" type="button" aria-label="Close">
+      <svg width="24" height="24">
+        <use href="/authentische-restaurant/assets/icons-CrWPZY8R.svg#icon-close-svgrepo-com"></use>
+      </svg>
+    </button>
+
+    <form id="ajaxForm" class="universal-form">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+      <input type="hidden" name="subject" value="Neue Reservierung / Anfrage" />
+
+      <h3 class="modal-form-title">Reservierung</h3>
+
+      <label class="form-field">
+        <span class="field-label">Ihr Name *</span>
+        <input type="text" name="name" required placeholder="z.B. Anna Müller" class="form-input" />
+      </label>
+
+      <label class="form-field">
+        <span class="field-label">Telefonnummer *</span>
+        <input type="tel" name="phone" required placeholder="+49 123 456789" class="form-input" />
+      </label>
+
+      <label class="form-field">
+        <span class="field-label">E-Mail-Adresse *</span>
+        <input type="email" name="email" required placeholder="anna.mueller@example.de" class="form-input" />
+      </label>
+
+      <label class="form-field">
+        <span class="field-label">Thema *</span>
+        <select name="thema" required class="form-select">
+          <option value="" disabled selected>Bitte wählen Sie...</option>
+          <option value="Tischreservierung">Tisch reservieren</option>
+          <option value="Frage">Allgemeine Frage</option>
+        </select>
+      </label>
+
+      <label class="form-field">
+        <span class="field-label">Ihre Nachricht *</span>
+        <textarea name="message" required placeholder="Wie können wir Ihnen helfen?" class="form-textarea"></textarea>
+      </label>
+
+      <label class="form-checkbox-field">
+        <input type="checkbox" name="privacy_policy" required class="form-checkbox" />
+        <span class="checkbox-text">
+          Ich habe die <a href="./datenschutz.html" target="_blank" class="form-link">Datenschutzerklärung</a> gelesen und akzeptiere sie. *
+        </span>
+      </label>
+
+      <button type="submit" class="form-submit-btn" id="submitBtn">Nachricht senden</button>
+    </form>
+
+    <div id="successMessage" class="form-success-block" style="display: none;">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#d3b07a" stroke-width="2">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      <h3>Vielen Dank!</h3>
+      <p>Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns в розрізі Kürze bei Ihnen melden.</p>
+    </div>
+
+  </div>
+</div>
 
   </body>
 </html>
